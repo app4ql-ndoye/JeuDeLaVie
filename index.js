@@ -2,8 +2,8 @@ window.onload = function() {
   var canvas = document.getElementById('can');
   var context = canvas.getContext('2d');
   var a = [];
-  var taille = 10;
-  var nb= 1000;
+  var taille = document.getElementById('id_taille');
+  var nb= document.getElementById('id_nb');
 
   setInterval(anime, nb);
  
@@ -16,9 +16,14 @@ window.onload = function() {
                   a[i*taille+j] = 1;
                   context.fillStyle = "green";
               } else {
+
+                  
                   a[i*taille+j] = 0;
                   context.fillStyle = "red";
+                  
               }
+              
+                
               context.fillRect(taille*i, taille*j, taille, taille);
           }
       }
